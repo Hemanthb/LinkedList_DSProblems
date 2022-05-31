@@ -95,6 +95,12 @@ namespace LinkedList
                 Console.WriteLine("Invalid Postion");
             }
         }
+
+        public void Pop()
+        {
+            this.head = this.head.next;
+            Console.WriteLine("first node deleted");
+        }
         
     }
 }
