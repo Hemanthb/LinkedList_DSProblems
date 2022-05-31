@@ -95,11 +95,24 @@ namespace LinkedList
                 Console.WriteLine("Invalid Postion");
             }
         }
-
+        //To Pop First Node of the list
         public void Pop()
         {
             this.head = this.head.next;
             Console.WriteLine("first node deleted");
+        }
+        //To delete last node of the list
+        public void PopLast()
+        {
+
+            Node current=this.head,prevNode = null;
+            while(current.next != null)
+            {
+                prevNode = (Node)current;
+                current = current.next;
+            }
+            prevNode.next = null;
+            Console.WriteLine("Last Node deleted");
         }
         
     }

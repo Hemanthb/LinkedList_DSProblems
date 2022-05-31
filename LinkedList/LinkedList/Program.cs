@@ -4,7 +4,7 @@ int yes = 1;
 while (yes == 1)
 {
     Console.WriteLine("Enter your choice\n1 - Adding to the list\n2 - To add and reverse the list\n3 - To insert a new node\n" +
-        "4 - To Delete First Node\n");
+        "4 - To Delete First Node\n5 - To Delete the Last Node\n");
     int choice = Convert.ToInt32(Console.ReadLine());
     switch (choice)
     {
@@ -30,6 +30,10 @@ while (yes == 1)
             break;
         case 4:
             linkedList.Pop();
+            linkedList.Displaylist();
+            break;
+        case 5:
+            linkedList.PopLast();
             linkedList.Displaylist();
             break;
     }
