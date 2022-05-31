@@ -9,6 +9,7 @@ namespace LinkedList
     internal class LinkedList
     {
         Node head;
+        //To add or append new node to a list
         public void addNode(int data)
         {
             Node node = new Node(data);
@@ -43,6 +44,7 @@ namespace LinkedList
             }
             Console.WriteLine();
         }
+        //To reverse a given linked list
         public void ReverseList()
         {
             Node prev = null,current = head,next = null;
@@ -56,6 +58,42 @@ namespace LinkedList
             }
             head = prev;
             
+        }
+        //To Insert a node at a given position
+        public void InsertNewNode(int position,int newNodeData)
+        {
+            Node temp = null, next = null,prevNode = null;
+            if (position == 0)
+            {
+                Node newNode = new Node(newNodeData);
+                temp = this.head;
+                newNode.next = this.head;
+                this.head = newNode;
+
+            }
+            else if (position > 0)
+            {
+                prevNode = this.head;
+                while (position != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node newNode = new Node(newNodeData);
+                        newNode.next = prevNode.next;
+                        prevNode.next = newNode;
+                    }
+                    prevNode = prevNode.next;
+                    position--;
+                }
+                if(position != 1)
+                {
+                    Console.WriteLine("Invalid Postion");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid Postion");
+            }
         }
         
     }
