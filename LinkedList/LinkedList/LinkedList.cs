@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    internal class LinkedList
+    public class LinkedList
     {
         Node head;
         //To add or append new node to a list
@@ -113,6 +113,19 @@ namespace LinkedList
             }
             prevNode.next = null;
             Console.WriteLine("Last Node deleted");
+        }
+        public Boolean Search(int findData)
+        {
+            while(this.head != null)
+            {
+                if(this.head.data == findData)
+                {
+                    return true;
+                    break;
+                }
+                this.head = this.head.next;
+            }
+            return false;
         }
         
     }

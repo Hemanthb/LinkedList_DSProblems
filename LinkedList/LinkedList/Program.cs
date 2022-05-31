@@ -4,7 +4,7 @@ int yes = 1;
 while (yes == 1)
 {
     Console.WriteLine("Enter your choice\n1 - Adding to the list\n2 - To add and reverse the list\n3 - To insert a new node\n" +
-        "4 - To Delete First Node\n5 - To Delete the Last Node\n");
+        "4 - To Delete First Node\n5 - To Delete the Last Node\n6 - To sSearch for a data in the list\n");
     int choice = Convert.ToInt32(Console.ReadLine());
     switch (choice)
     {
@@ -36,6 +36,11 @@ while (yes == 1)
             linkedList.PopLast();
             linkedList.Displaylist();
             break;
+        case 6:
+            Boolean result = linkedList.Search(30);
+            Console.WriteLine("Match Found: "+result);
+            break;
+            
     }
     Console.WriteLine("Press 1 to continue selecting functions....");
     yes = Convert.ToInt32(Console.ReadLine());
