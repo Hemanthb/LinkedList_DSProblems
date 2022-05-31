@@ -114,18 +114,20 @@ namespace LinkedList
             prevNode.next = null;
             Console.WriteLine("Last Node deleted");
         }
-        public Boolean Search(int findData)
+        public int Search(int findData)
         {
+            int position = 0;
             while(this.head != null)
             {
+                position++;
                 if(this.head.data == findData)
                 {
-                    return true;
+                    return position;
                     break;
                 }
                 this.head = this.head.next;
             }
-            return false;
+            return position;
         }
         
     }

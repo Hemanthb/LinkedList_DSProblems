@@ -10,7 +10,7 @@ namespace LinkedListTest
             list.addNode(30);
             list.addNode(70);
             var actualResult = list.Search(30);
-            Assert.IsTrue(actualResult);
+            Assert.That(actualResult,Is.EqualTo(2));
         }
     }
 }

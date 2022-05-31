@@ -37,8 +37,8 @@ while (yes == 1)
             linkedList.Displaylist();
             break;
         case 6:
-            Boolean result = linkedList.Search(30);
-            Console.WriteLine("Match Found: "+result);
+            int result = linkedList.Search(30);
+            Console.WriteLine("Match Found at position: "+result);
             break;
             
     }
